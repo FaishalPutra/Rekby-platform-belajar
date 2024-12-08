@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekby</title>
+    <link rel="stylesheet" href="Recc.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">
+                <img src="../../Image/logo.png" alt="Logo" class="logo-img">
+                <span>Rekby</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../index.html#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="sign-in" onclick="window.location.href='Frontend/profil/profil.html'">Sign In</button></li>
+            </ul>
+        </div>
+    </nav>
+
+        <!-- Search Section -->
+        <header class="search-header">
+            <div class="container">
+                <div class="search-bar">
+                    <h1>Rekomendasi Tempat Belajar</h1>
+                    <input type="text" id="search-input" placeholder="Cari tempat belajar...">
+                    <button id="search-button">Cari</button>
+                </div>
+            </div>
+        </header>
+    
+        <!-- Recommendations Section -->
+        <section class="recommendations">
+            <div class="container">
+                <h2>Hasil Pencarian</h2>
+                <div class="filter-sort">
+                    <button id="filter-button">Filter</button>
+                    <select id="sort-select">
+                        <option value="relevance">Paling Relevan</option>
+                        <option value="rating">Rating Tertinggi</option>
+                        <option value="distance">Terdekat</option>
+                    </select>
+                </div>
+                <div class="recommendation-list">
+                    <!-- Contoh Kartu Rekomendasi -->
+                    <div class="recommendation-item">
+                        <img src="../../Image/place/sono.png" alt="Tempat 1" class="recommendation-image">
+                        <div class="recommendation-info">
+                            <h3>Sono creative space</h3>
+                            <p>Rating: ⭐ 4.0 (442 ulasan)</p>
+                            <p>Alamat: Griya, Jl. Raya Jatinangor No.15A, Sayang, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</p>
+                            <button class="detail-button">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <img src="../../Image/place/batuapi.png" alt="Tempat 2" class="recommendation-image">
+                        <div class="recommendation-info">
+                            <h3>Perpustakaan Batu Api</h3>
+                            <p>Rating: ⭐ 4.9 (65 ulasan)</p>
+                            <p>Alamat: Jl. Raya Jatinangor No.142 A, Cikeruh, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</p>
+                            <button class="detail-button">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <img src="../../Image/place/fore.png" alt="Tempat 2" class="recommendation-image">
+                        <div class="recommendation-info">
+                            <h3>Fore Coffee - Jatinangor Town Square</h3>
+                            <p>Rating: ⭐ 4.7 (150 ulasan)</p>
+                            <p>Alamat: Jl. Raya Jatinangor No.150, Cikeruh, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</p>
+                            <button class="detail-button">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <img src="../../Image/place/tole.png" alt="Tempat 2" class="recommendation-image">
+                        <div class="recommendation-info">
+                            <h3>Toleransi Kopi Jatinangor</h3>
+                            <p>Rating: ⭐ 4.1 (568 ulasan)</p>
+                            <p>Alamat: Jl. Raya Jatinangor No.42b, Cibeusi, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45367</p>
+                            <button class="detail-button">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <img src="../../Image/place/pawon.png" alt="Tempat 2" class="recommendation-image">
+                        <div class="recommendation-info">
+                            <h3>Pawon najwa - warkop</h3>
+                            <p>Rating: ⭐ 3.1 (21 ulasan)</p>
+                            <p>Alamat: 3Q4F+Q79, Jl. Kolonel Ahmad Syam, Sayang, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</p>
+                            <button class="detail-button">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <img src="../../Image/place/nomar.png" alt="Tempat 2" class="recommendation-image">
+                        <div class="recommendation-info">
+                            <h3>Nomar Kopi Roastery Jatinangor</h3>
+                            <p>Rating: ⭐ 4.6 (217 ulasan)</p>
+                            <p>Alamat: Jalan Ir. Soekarno No.KM 20, Cibeusi, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</p>
+                            <button class="detail-button">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <!-- Tambahkan kartu rekomendasi lainnya -->
+                </div>
+            </div>
+        </section>
+
+    <script src="Recc.js"></script>
+</body>
+</html>

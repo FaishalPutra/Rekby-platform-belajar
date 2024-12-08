@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Default Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(51, 51, 51, 1); /* Solid background by default */
+    color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+    padding: 0; /* Hapus padding agar kontainer mengisi penuh */
+}
+
+
+/* Transparent Navbar */
+.navbar.scrolled {
+    background-color: rgba(51, 51, 51, 0.8); /* Add transparency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Enhance shadow for effect */
+}
+
+.navbar-container { 
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0; /* Hapus margin */
+    padding: 0; /* Hapus padding */
+    box-sizing: border-box; /* Memastikan padding tidak memengaruhi lebar */
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 1vw;
+
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.logo span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-right: 1vw;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#sign-in {
+    background-color: #f04e23; /* Warna tombol */
+    color: white; /* Warna teks */
+    border: none; /* Hapus border */
+    padding: 10px 20px; /* Perbesar tombol dengan padding */
+    border-radius: 5px; /* Berikan sudut melengkung */
+    cursor: pointer; /* Tambahkan efek pointer */
+    font-size: 1em; /* Perbesar teks */
+    text-align: center; /* Pusatkan teks */
+    display: inline-block; /* Pastikan tombol mengikuti ukuran teks */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center; /* Pastikan tombol sejajar secara vertikal */
+    gap: 15px; /* Jarak antar elemen */
+}
+
+#sign-in:hover {
+    background-color: #d43d20; /* Warna tombol saat hover */
+}
+
+/* Search Section */
+.search-header {
+    background-color: #f8f8f8;
+    padding: 30px 20px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.search-bar input {
+    margin-left: 22.5vw;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    height: 13px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #f04e23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 35px;
+}
+
+/* Recommendations Section */
+.recommendations {
+    padding: 30px 20px;
+}
+
+.filter-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-sort button, .filter-sort select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recommendation-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.recommendation-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.recommendation-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.recommendation-info {
+    padding: 15px;
+}
+
+.detail-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #f04e23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}

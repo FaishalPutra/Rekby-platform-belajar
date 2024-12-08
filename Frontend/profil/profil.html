@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekby</title>
+    <link rel="stylesheet" href="profil.css">
+</head>
+<body>
+    <div class="auth_container">
+        <!-- Sign In Section -->
+        <div id="sign-in" class="auth_section active">
+            <button class="close_btn" onclick="window.location.href='../../index.html'">X</button>
+            <h2>Sign In</h2>
+            <form id="sign-in-form" class="auth_form">
+                <div class="form_group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email_signIn" placeholder="Enter your email" required>
+                </div>
+                <div class="form_group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password_signIn" placeholder="Enter your password" required>
+                </div>
+                <button id="signIn_btn" class="btn">Sign In</button>
+                <p>Don't have an account? <a href="#" onclick="showAuthSection('sign-up')">Sign Up</a></p>
+            </form>
+        </div>
+
+        <!-- Sign Up Section -->
+        <div id="sign-up" class="auth_section">
+            <button class="back_btn" onclick="showAuthSection('sign-in')">
+                <img src="../../Image/arrowback.png" alt="Back to Sign In" class="arrow">
+            </button>
+            <h2>Sign Up</h2>
+            <form id="signUp_form" class="auth_form">
+                <div class="form_group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form_group">
+                    <label for="email-signup">Email:</label>
+                    <input type="email" id="email_signUp" placeholder="Enter your email" required>
+                </div>
+                <div class="form_group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]+" required>
+                </div>
+                <div class="form_group">
+                    <label for="password-signup">Password:</label>
+                    <input type="password" id="password_signUp" placeholder="Create a password" required>
+                </div>
+                <button id="signUp_btn" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="profil.js"></script>
+    <script type="module" src="../../Backend/login.js"></script>
+</body>
+</html>

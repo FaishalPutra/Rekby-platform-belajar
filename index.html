@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbarlogout">
         <div class="container navbar-container">
             <div class="logo">
                 <img src="Image/logo.png" alt="Logo" class="logo-img">
@@ -19,7 +19,24 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button id="sign-in" onclick="window.location.href='Frontend/profil/profil.html'">Sign In</button></li>
+                <li><button id="sign-in" onclick="window.location.href='Frontend/login/login.html'">Sign In</button></li>
+            </ul>
+        </div>
+    </nav>
+
+        <!-- Navbar hidden -->
+    <nav class="navbar hidden" id="navbarlogin">
+        <div class="container navbar-container">
+            <div class="logo">
+                <img src="Image/logo.png" alt="Logo" class="logo-img">
+                <span>Rekby</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="sign-in" onclick="window.location.href='Frontend/profil/profil.html'">Profile</button></li>
             </ul>
         </div>
     </nav>
@@ -31,7 +48,7 @@
             <h1>Welcome to Rekby</h1>
             <p>Your trusted platform for finding the perfect learning environment by your preferences. Start your journey today!</p>
             <div class="hero-buttons">
-                <button id="sign-in" onclick="window.location.href='Frontend/profil/profil.html'">Sign In Now!</button>
+                <button id="sign-in" onclick="window.location.href='#features'" >Get Start now!</button>
             </div>
         </div>
     </header>
@@ -79,5 +96,6 @@
     </footer>
 
     <script src="Frontend/homepage.js"></script>
+    
 </body>
 </html>

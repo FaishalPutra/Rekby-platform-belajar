@@ -11,3 +11,4 @@ function showAuthSection(sectionId) {
     const targetSection = document.getElementById(sectionId);
     targetSection.classList.add('active');
 }
+

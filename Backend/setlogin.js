@@ -43,6 +43,8 @@ const signupButton = document.getElementById("signUp_btn");
 
 // button untuk Sign Up
 signupButton.addEventListener("click", async () => {
+  event.preventDefault(); // mencegah refresh
+
   const email = document.getElementById("email_signUp").value;
   const password = document.getElementById("password_signUp").value;
   const username = document.getElementById("username").value;
@@ -63,16 +65,18 @@ signupButton.addEventListener("click", async () => {
   }
 });
 
-
 // button untuk Sign In
 signinButton.addEventListener("click", async () => {
+  event.preventDefault(); // mencegah refresh
+
   const email = document.getElementById("email_signIn").value;
   const password = document.getElementById("password_signIn").value;
 
   try {
     const user = await signIn(email, password);
+    localStorage.setItem("isLoggedIn", "true");
     alert(`Berhasil login, selamat datang ${user.email}`);
-    window.location.href = "../../../index.html";
+    window.location.href = "../../index.html";
   } catch (error) {
     alert(`Gagal login: ${error.message}`);
   }

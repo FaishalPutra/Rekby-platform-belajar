@@ -6,96 +6,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #f4f4f4;
 }
 
-.auth_container {
-    width: 100%;
-    max-width: 350px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: relative; /* Membuat elemen di dalamnya bisa diposisikan absolut */
+.arrow {
+    width: 30px;
+    height: 30px;
 }
 
-.auth_section {
-    display: none;
-}
-
-.auth_section.active {
-    display: block;
-}
-
-.auth_form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: left;
-}
-
-.form_group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.form_group input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.btn {
-    padding: 10px 20px;
-    background-color: #f04e23;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background-color: #d43d20;
-}
-
-p {
-    font-size: 0.9em;
-}
-
-p a {
-    color: #f04e23;
-    text-decoration: none;
-}
-
-p a:hover {
-    text-decoration: underline;
-}
-
-/* Close Button (X Button) for Sign In */
-.close_btn {
-    position: absolute;
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    color: black;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.close_btn:hover {
-    opacity: 0.8; /* Efek hover */
-}
-
-/* Back Button (Arrow Button) for Sign Up */
-.back_btn {
+.back-btn {
     position: absolute;
     top: 15px; /* Jarak dari atas container */
     left: 10px; /* Jarak dari kiri container */
@@ -104,13 +24,97 @@ p a:hover {
     cursor: pointer;
     z-index: 2; /* Pastikan tombol berada di atas konten lainnya */
 }
-
-.arrow {
-    width: 30px;
-    height: 30px;
+/* Profile Card */
+.profile-card {
+    position: relative; 
+    display: flex;
+    width: 600px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Tambahkan gaya hover untuk tombol gambar */
-.back_btn:hover .arrow {
-    opacity: 0.8; /* Efek hover */
+/* Left Section */
+.profile-left {
+    flex: 1;
+    background: linear-gradient(45deg, #f04e23, #ff6f61);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-container {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-left h2 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+/* Right Section */
+.profile-right {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+.info label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-box {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f8f8f8;
+    font-size: 1em;
+}
+
+ul.info-box {
+    list-style: none;
+    padding: 0;
+}
+
+ul.info-box li {
+    margin: 5px 0;
+}
+
+/* Logout Button */
+.logout {
+    padding: 10px 20px;
+    background-color: #f04e23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.logout:hover {
+    background-color: #d43d20;
 }

@@ -13,45 +13,45 @@ const db = getFirestore(app);
 let isLoggingOut = false;
 
 // DOM Elements
-// const usernameBox = document.getElementById("username_box");
-// const emailBox = document.getElementById("email_box");
-// const scoreBox = document.getElementById("score_box");
+const usernameBox = document.getElementById("username_box");
+const emailBox = document.getElementById("email_box");
+const phoneBox = document.getElementById("phone_box");
 const logoutButton = document.getElementById("logout-button");
 
 
-// onAuthStateChanged(auth, async (user) => {
-//   if (user && !isLoggingOut) {
-//     console.log("Pengguna login:", user.email);
+onAuthStateChanged(auth, async (user) => {
+  if (user && !isLoggingOut) {
+    console.log("Pengguna login:", user.email);
 
-//     // Ambil UID dan email
-//     const uid = user.uid;
-//     const email = user.email;
+    // Ambil UID dan email
+    const uid = user.uid;
+    const email = user.email;
 
-//     emailBox.textContent = email || "Tidak ada email";
+    emailBox.textContent = email || "Tidak ada email";
 
-//     // Ambil username dan skor dari Firestore
-//     try {
-//       const userDoc = await getDoc(doc(db, "users", uid));
-//       if (userDoc.exists()) {
-//         const userData = userDoc.data();
-//         usernameBox.textContent = userData.username || "Tidak ada username";
-//         scoreBox.textContent = userData.score || "0";
-//       } else {
-//         console.error("Data pengguna tidak ditemukan di Firestore.");
-//       }
-//     } catch (error) {
-//       console.error("Gagal mengambil data pengguna:", error);
-//     }
-//   } else if (!user && !isLoggingOut) {
-//     console.log("Pengguna tidak login.");
-//     setTimeout(() => {
-//       if (!auth.currentUser) {
-//         alert("Anda belum login. Silakan login terlebih dahulu.");
-//         window.location.href = "../Signin/signin.html";
-//       }
-//     }, 1000);
-//   }
-// });
+    // Ambil username
+    try {
+      const userDoc = await getDoc(doc(db, "users", uid));
+      if (userDoc.exists()) {
+        const userData = userDoc.data();
+        usernameBox.textContent = userData.username || "Tidak ada username";
+        phoneBox.textContent = userData.phone || "0";
+      } else {
+        console.error("Data pengguna tidak ditemukan di Firestore.");
+      }
+    } catch (error) {
+      console.error("Gagal mengambil data pengguna:", error);
+    }
+  } else if (!user && !isLoggingOut) {
+    console.log("Pengguna tidak login.");
+    setTimeout(() => {
+      if (!auth.currentUser) {
+        alert("Anda belum login. Silakan login terlebih dahulu.");
+        window.location.href = "../Signin/signin.html";
+      }
+    }, 1000);
+  }
+});
 
 // button untuk logout
 logoutButton.addEventListener("click", async () => {

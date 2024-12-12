@@ -17,8 +17,8 @@
                 <ul class="nav-links">
                     <li><a href="../../index.html">Home</a></li>
                     <li><a href="../../index.html#features">Features</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="../../index.html#about">About</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
                     <li><button id="sign-in" onclick="window.location.href='../login/login.html'">Sign In</button></li>
                 </ul>
             </div>
@@ -36,7 +36,7 @@
                 <li><a href="../../index.html#features">Features</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button id="sign-in" onclick="window.location.href='../Profil/profil.js'">Profile</button></li>
+                <li><button id="sign-in" onclick="window.location.href='../Profil/profil.html'">Profile</button></li>
             </ul>
         </div>
     </nav>
@@ -64,15 +64,15 @@
                         <option value="distance">Terdekat</option>
                     </select>
                 </div>
+
                 <div class="recommendation-list">
-                    <!-- Contoh Kartu Rekomendasi -->
                     <div class="recommendation-item">
                         <img src="../../Image/place/sono.png" alt="Tempat 1" class="recommendation-image">
                         <div class="recommendation-info">
                             <h3>Sono creative space</h3>
                             <p>Rating: ⭐ 4.0 (442 ulasan)</p>
                             <p>Alamat: Griya, Jl. Raya Jatinangor No.15A, Sayang, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</p>
-                            <button class="detail-button">Lihat Detail</button>
+                            <button class="detail-button" data-location="sono">Lihat Detail</button>
                         </div>
                     </div>
                     <div class="recommendation-item">
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                     <div class="recommendation-item">
-                        <img src="../../Image/place/fore.png" alt="Tempat 2" class="recommendation-image">
+                        <img src="../../Image/place/fore.png" alt="Tempat 23" class="recommendation-image">
                         <div class="recommendation-info">
                             <h3>Fore Coffee - Jatinangor Town Square</h3>
                             <p>Rating: ⭐ 4.7 (150 ulasan)</p>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="recommendation-item">
-                        <img src="../../Image/place/tole.png" alt="Tempat 2" class="recommendation-image">
+                        <img src="../../Image/place/tole.png" alt="Tempat 4" class="recommendation-image">
                         <div class="recommendation-info">
                             <h3>Toleransi Kopi Jatinangor</h3>
                             <p>Rating: ⭐ 4.1 (568 ulasan)</p>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="recommendation-item">
-                        <img src="../../Image/place/pawon.png" alt="Tempat 2" class="recommendation-image">
+                        <img src="../../Image/place/pawon.png" alt="Tempat 5" class="recommendation-image">
                         <div class="recommendation-info">
                             <h3>Pawon najwa - warkop</h3>
                             <p>Rating: ⭐ 3.1 (21 ulasan)</p>
@@ -112,7 +112,7 @@
                         </div>
                     </div>
                     <div class="recommendation-item">
-                        <img src="../../Image/place/nomar.png" alt="Tempat 2" class="recommendation-image">
+                        <img src="../../Image/place/nomar.png" alt="Tempat 6" class="recommendation-image">
                         <div class="recommendation-info">
                             <h3>Nomar Kopi Roastery Jatinangor</h3>
                             <p>Rating: ⭐ 4.6 (217 ulasan)</p>
@@ -120,11 +120,49 @@
                             <button class="detail-button">Lihat Detail</button>
                         </div>
                     </div>
-                    <!-- Tambahkan kartu rekomendasi lainnya -->
+                    <div class="recommendation-item">
+                        <img src="../../Image/place/bento.png" alt="Tempat 7" class="recommendation-image">
+                        <div class="recommendation-info">
+                            <h3>Bento Kopi Jatinangor</h3>
+                            <p>Rating: ⭐ 4.4 (481 ulasan)</p>
+                            <p>Alamat: Jl. Kolonel Ahmad Syam, Cikeruh, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</p>
+                            <button class="detail-button">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <img src="../../Image/place/jumpa.png" alt="Tempat 8" class="recommendation-image">
+                        <div class="recommendation-info">
+                            <h3>Jumpa Asa Coffee-nity & Eatery</h3>
+                            <p>Rating: ⭐ 4.7 (80 ulasan)</p>
+                            <p>Alamat: Jalan Caringin.77, Residence No.77, Sayang, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</p>
+                            <button class="detail-button">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <img src="../../Image/place/jco.png" alt="Tempat 9" class="recommendation-image">
+                        <div class="recommendation-info">
+                            <h3>J.Co Donuts & Coffee JATOS</h3>
+                            <p>Rating: ⭐ 4.4 (378 ulasan)</p>
+                            <p>Alamat: Jatinangor Town Square, Jl. Raya Jatinangor No.150, Cikeruh, Kec. Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</p>
+                            <button class="detail-button">Lihat Detail</button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
+            <!-- Map Modal -->
+    <div id="mapModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </div>
+    </div>
+    
+
+
     <script src="Recc.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 </html>

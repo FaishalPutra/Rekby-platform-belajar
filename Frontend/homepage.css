@@ -219,14 +219,20 @@ body {
     }
 }
 
-
-
 /* Footer */
 .footer {
     text-align: center;
     background: #333;
     color: white;
     padding: 20px 0;
+}
+
+.line {
+    width: 60px;
+    height: 5px;
+    background-color: #f04e23; /* Warna oranye */
+    margin: 0 auto 20px; /* Margin untuk posisi tengah */
+    border-radius: 10px;
 }
 
 /* Responsiveness */
@@ -257,6 +263,86 @@ body {
         width: 100%;
     }
 }
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.about p {
+    margin-bottom: 40px;
+    font-size: 1em;
+    color: #666;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image {
+    flex: 1;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-text {
+    flex: 2;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
 
 .hidden{
     display: none;
